@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2 — BDD</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+   <h1>CRUD</h1>
+
+<div class="sections-grid">
+
+  <!-- Colonne 1 : Recherche -->
+    <div class="section-card">
+        <h2>Sélectionner un étudiant</h2>
+        <div class="search-row">
+      <label>Appréciation :</label>
+      <select id="appreciation">
+        <option value="">-- Choisir --</option>
+        <option value="bon">bon</option>
+        <option value="pas bon">pas bon</option>
+      </select>
+    </div>
+    <button onclick="charger()">Rechercher</button>
+    <ul id="liste"></ul>
+  </div>
+
+  <!-- Colonne 2 : Ajouter -->
+  <div class="section-card">
+    <h2>Ajouter un étudiant</h2>
+    <form id="formEtudiant">
+      <label>Nom :</label>
+      <input type="text" id="nom">
+      <label>Prénom :</label>
+      <input type="text" id="prenom">
+      <label>Email :</label>
+      <input type="email" id="email">
+      <label>Note :</label>
+      <input type="number" id="note" step="0.01">
+      <label>Appréciation :</label>
+      <select id="appreciation2">
+        <option value="bon">bon</option>
+        <option value="pas bon">pas bon</option>
+      </select>
+      <button type="button" onclick="ajouter()">Ajouter</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <!-- Colonne 3 : Modifier -->
+  <div class="section-card">
+    <h2>Modifier un étudiant</h2>
+    <form id="formUpdate">
+      <label>ID :</label>
+      <input type="number" id="update_id">
+      <label>Nom :</label>
+      <input type="text" id="update_nom">
+      <label>Prénom :</label>
+      <input type="text" id="update_prenom">
+      <label>Email :</label>
+      <input type="email" id="update_email">
+      <label>Note :</label>
+      <input type="number" id="update_note" step="0.01">
+      <label>Appréciation :</label>
+      <select id="update_appreciation">
+        <option value="bon">bon</option>
+        <option value="pas bon">pas bon</option>
+      </select>
+      <button type="button" onclick="modifier()">Modifier</button>
+    </form>
+    <p id="messageUpdate"></p>
+  </div>
+
+  <!-- Colonne 4 : Supprimer -->
+  <div class="section-card">
+    <h2>Supprimer un étudiant</h2>
+    <form id="formDelete">
+      <label>ID :</label>
+      <input type="number" id="delete_id">
+      <button type="button" onclick="supprimer()">Supprimer</button>
+    </form>
+    <p id="messageDelete"></p>
+  </div>
+
+</div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
