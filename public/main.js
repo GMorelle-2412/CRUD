@@ -85,7 +85,7 @@ function supprimer() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ id: id })
     })
-    
+
     .then(response => response.json())
     .then(result => {
         document.getElementById("messageDelete").textContent = result.message;
